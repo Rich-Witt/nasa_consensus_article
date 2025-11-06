@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: nasa_consensus_alignmnet.aux
+The style file: elsarticle-num.bst
+Database file #1: master.bib
+Warning--empty author in nasa_smd_hearing_2024
+Warning--empty pages in wessen2013ConceptMaturity
+Warning--empty pages in mikolov2013_reps_of_words
+Warning--empty journal in radford2018improving_GPT
+Warning--empty year in Academies_decadal
+Warning--empty year in NASA_decadal
+Warning--empty year in SMD_2023
+Warning--empty year in NASA_sci_strat
+Warning--empty year in NASA_SMD
+You've used 40 entries,
+            2978 wiz_defined-function locations,
+            890 strings with 22315 characters,
+and the built_in function-call counts, 10539 in all, are:
+= -- 1049
+> -- 268
+< -- 5
++ -- 110
+- -- 70
+* -- 625
+:= -- 1397
+add.period$ -- 51
+call.type$ -- 40
+change.case$ -- 61
+chr.to.int$ -- 0
+cite$ -- 49
+duplicate$ -- 372
+empty$ -- 1337
+format.name$ -- 73
+if$ -- 2901
+int.to.chr$ -- 0
+int.to.str$ -- 40
+missing$ -- 10
+newline$ -- 166
+num.names$ -- 43
+pop$ -- 353
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 758
+stack$ -- 0
+substring$ -- 159
+swap$ -- 105
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 9
+while$ -- 52
+width$ -- 42
+write$ -- 388
+(There were 9 warnings)
