@@ -1,8 +1,8 @@
-PWD /Users/rivet/Documents/dissertation_repos/nasa_consensus_article
+PWD /Users/rivet/Documents/dissertation_repos/nasa_consensus_article/Language AI in the Space Sciences Workshop (Abstract Submission)
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/rivet/Documents/dissertation_repos/nasa_consensus_article/nasa_consensus_alignmnet.tex
+INPUT /Users/rivet/Documents/dissertation_repos/nasa_consensus_article/Language AI in the Space Sciences Workshop (Abstract Submission)/nasa_consensus_alignmnet.tex
 OUTPUT nasa_consensus_alignmnet.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/elsarticle/elsarticle.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/elsarticle/elsarticle.cls

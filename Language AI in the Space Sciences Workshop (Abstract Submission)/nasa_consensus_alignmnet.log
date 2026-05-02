@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  6 NOV 2025 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  2 MAY 2026 06:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/rivet/Documents/dissertation_repos/nasa_consensus_article/nasa_consensus_alignmnet.tex
-(/Users/rivet/Documents/dissertation_repos/nasa_consensus_article/nasa_consensus_alignmnet.tex
+**"/Users/rivet/Documents/dissertation_repos/nasa_consensus_article/Language AI in the Space Sciences Workshop (Abstract Submission)/nasa_consensus_alignmnet.tex"
+(/Users/rivet/Documents/dissertation_repos/nasa_consensus_article/Language AI in the Space Sciences Workshop (Abstract Submission)/nasa_consensus_alignmnet.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/elsarticle/elsarticle.cls
@@ -372,15 +372,10 @@ Package hyperref Info: Link coloring ON on input line 73.
 \@outlinefile=\write4
 \openout4 = `nasa_consensus_alignmnet.out'.
 
-
-Overfull \hbox (10.49527pt too wide) in paragraph at lines 148--151
-\T1/cmr/m/n/12 The Na-tional Academies of Sci-ence En-gi-neer-ing and Medicine con-ducts Decadal
- []
-
 <fig_graphical_abstract.png, id=76, 730.6497pt x 491.436pt>
 File: fig_graphical_abstract.png Graphic file (type png)
 <use fig_graphical_abstract.png>
-Package pdftex.def Info: fig_graphical_abstract.png  used on input line 156.
+Package pdftex.def Info: fig_graphical_abstract.png  used on input line 155.
 (pdftex.def)             Requested size: 350.99762pt x 236.08156pt.
 
 
@@ -391,11 +386,11 @@ Package pdftex.def Info: fig_graphical_abstract.png  used on input line 156.
 [2
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 186.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 184.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 186.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 184.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -404,7 +399,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.203 
+l.201 
        [1
 
 
@@ -414,26 +409,26 @@ l.203
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.215 
+l.213 
        [2]
 
 [3]
 
 [4]
-
-[5]
-<fig_DS_Process.png, id=181, 1366.10374pt x 475.7775pt>
+<fig_DS_Process.png, id=161, 1366.10374pt x 475.7775pt>
 File: fig_DS_Process.png Graphic file (type png)
 <use fig_DS_Process.png>
-Package pdftex.def Info: fig_DS_Process.png  used on input line 253.
+Package pdftex.def Info: fig_DS_Process.png  used on input line 251.
 (pdftex.def)             Requested size: 350.99762pt x 122.24pt.
 
 
+[5]
+
 [6 <./fig_DS_Process.png>]
-<fig_simple_context_dist.png, id=194, 591.20876pt x 545.03625pt>
+<fig_simple_context_dist.png, id=195, 591.20876pt x 545.03625pt>
 File: fig_simple_context_dist.png Graphic file (type png)
 <use fig_simple_context_dist.png>
-Package pdftex.def Info: fig_simple_context_dist.png  used on input line 285.
+Package pdftex.def Info: fig_simple_context_dist.png  used on input line 283.
 (pdftex.def)             Requested size: 272.99881pt x 251.68445pt.
 
 
@@ -442,73 +437,74 @@ Package pdftex.def Info: fig_simple_context_dist.png  used on input line 285.
 [8 <./fig_simple_context_dist.png>]
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 326--326
+Underfull \hbox (badness 10000) in paragraph at lines 324--324
 []|\T1/cmr/bx/n/12 Corresponding
  []
 
 
-Underfull \hbox (badness 2837) in paragraph at lines 332--332
+Underfull \hbox (badness 2837) in paragraph at lines 330--330
 []|\T1/cmr/m/n/12 Earth Sci-ence and Ap-pli-ca-tions from
  []
 
-<fig_SP_to_DS_similarity.png, id=248, 730.6497pt x 491.436pt>
-File: fig_SP_to_DS_similarity.png Graphic file (type png)
-<use fig_SP_to_DS_similarity.png>
-Package pdftex.def Info: fig_SP_to_DS_similarity.png  used on input line 348.
-(pdftex.def)             Requested size: 350.99762pt x 236.08156pt.
 
 
 [10]
+<fig_SP_to_DS_similarity.png, id=253, 730.6497pt x 491.436pt>
+File: fig_SP_to_DS_similarity.png Graphic file (type png)
+<use fig_SP_to_DS_similarity.png>
+Package pdftex.def Info: fig_SP_to_DS_similarity.png  used on input line 346.
+(pdftex.def)             Requested size: 350.99762pt x 236.08156pt.
+
 
 [11 <./fig_SP_to_DS_similarity.png>]
 
 [12]
-Overfull \hbox (4.10349pt too wide) in paragraph at lines 380--381
+Overfull \hbox (4.10349pt too wide) in paragraph at lines 378--379
 []|\T1/cmr/bx/n/12 Corresponding
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 []|\T1/cmr/m/n/12 Planetary Sci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 []|\T1/cmr/m/n/12 Biological and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 \T1/cmr/m/n/12 Phys-i-cal Sci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 []|\T1/cmr/m/n/12 Planetary Sci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 []|\T1/cmr/m/n/12 Planetary Sci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--415
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 []|\T1/cmr/m/n/12 Biological and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--415
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 \T1/cmr/m/n/12 Phys-i-cal Sci-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--417
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 []|\T1/cmr/m/n/12 Planetary Sci-
  []
 
 
-Overfull \hbox (4.50446pt too wide) in paragraph at lines 377--419
+Overfull \hbox (4.50446pt too wide) in paragraph at lines 375--417
  [][] 
  []
 
@@ -520,7 +516,7 @@ Overfull \vbox (51.73088pt too high) has occurred while \output is active []
 
 
 [14]
-Overfull \hbox (6.71138pt too wide) in paragraph at lines 429--430
+Overfull \hbox (6.71138pt too wide) in paragraph at lines 427--428
 []\T1/cmr/m/n/12 Follow a \T1/cmtt/m/n/12 yyyy_SSP_Nasa_File_Name.pdf \T1/cmr/m/n/12 for-mat.
  []
 
@@ -559,17 +555,17 @@ Package rerunfilecheck Info: File `nasa_consensus_alignmnet.out' has not changed
  ) 
 Here is how much of TeX's memory you used:
  11750 strings out of 473190
- 179095 string characters out of 5715801
+ 179292 string characters out of 5715801
  588610 words of memory out of 5000000
  34754 multiletter control sequences out of 15000+600000
  572804 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,1244b,685s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1344b,685s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on nasa_consensus_alignmnet.pdf (21 pages, 604042 bytes).
+Output written on nasa_consensus_alignmnet.pdf (21 pages, 603503 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
- 408 compressed objects within 5 object streams
+ 474 PDF objects out of 1000 (max. 8388607)
+ 409 compressed objects within 5 object streams
  87 named destinations out of 1000 (max. 500000)
  165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
