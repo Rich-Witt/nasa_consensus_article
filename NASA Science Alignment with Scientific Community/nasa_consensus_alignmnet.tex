@@ -199,9 +199,9 @@ NASA alignment with scientific community interests in science discovery is of ma
 
 Creating a strategic plan for United States science discovery is a multi-agency, multi-year planning process. Two key corpora result from this planning process. The first corpus is U.S. National Academies of Science, Engineering, and Medicine (Academies) (NAS), which created the Decadal Surveys. The first Decadal Surveys were completed in 1964 in order to prioritize funding for astronomy projects that exceed individual agency budgets\cite{Academies2015_lessons}. The second corpus is composed of NASA planning documents authored at two different organizational levels. NASA Strategic Plans are products of the Office of the Administrator and establish agency goals and objectives\cite{WhiteHouse2021_space_priorities_framework}. SMD Science Plans which are products of NASA Science Mission Directorate and describe directorate-level science priorities, strategies, and implementation approaches.\cite{SMD_2025} In this paper we reefer to strategic and science plans collectively as NASA plans. NASA plans are used to define NASA project priorities while Decadal Surveys are used to identify scientific community interests.
 
-\subsection{Outline}
+% \subsection{Outline}
 
-The remainder of this paper is structured as follows: Section~\ref{lit} describes Decadal Surveys, NASA Science Strategy, and introduces the concept of word embeddings. Section~\ref{meth} describes the methodology and rationale used to compare project priorities at NASA with scientific consensus using context embeddings. Section~\ref{data} details the source documentation used in the analysis. Section~\ref{anal_results} provides the analysis and results from the documentation comparison. Finally Section~\ref{discussion} discusses the results and describes potential paths for future work. 
+The remainder of this paper is structured as follows: Section~\ref{lit} describes Decadal Surveys, NASA Science Strategy, and introduces the concept of word embeddings. Section~\ref{data} details the source documentation used in the analysis. Section~\ref{meth} describes the methodology and rationale used to compare project priorities at NASA with scientific consensus using context embeddings.  Section~\ref{anal_results} provides the analysis and results from the documentation comparison. Finally Section~\ref{discussion} discusses the results and describes potential paths for future work. 
 
 \section{Literature Review}
 \label{lit}
@@ -209,7 +209,7 @@ The remainder of this paper is structured as follows: Section~\ref{lit} describe
 
 Decadal Surveys are a strategic guide for the planning and execution of United States investments in Science and Technology\cite{Academies2015_lessons}. The purpose of Decadal Surveys is to reach consensus on science priorities for the next decade while aligning with the executive branch initiatives and adhering to fiscal budget constraints. In 2015 the Space Studies Board at the Academies conducted a Survey of Decadal Surveys to capture lessons learned and best practices across 51 years of Decadal Surveys. The bulk of this section relies on this work except where otherwise cited \cite{Academies2015_lessons}.
 
-Decadal Surveys are important to the entire scientific community. Survey chairs and committee members are accomplished scientists and engineers who are active leaders in their field from top institutions and universities throughout the world. A review of Decadal Survey committee and panel members reflects a distinguished roster of leaders in science and engineering. NASA and National Science Foundation (NSF) officials refer to the Decadal Survey recommendations as a blueprint or guidebook and individual research scientists refer to the Surveys as a "sword and shield": a sword for wining approval and shield against cancellation of federally funded programs. Two independent studies of Surveys in 2011 \cite{Trimble2011} and 2023 \cite{pan2023seven_Decadals} both found that around 60\% of projects identified in the Decadal Surveys are funded within 15 years of Survey publication by either federal funds or other sources. 
+Decadal Surveys are important to the entire scientific community. Survey chairs and committee members are accomplished scientists and engineers who are active leaders in their field from top institutions and universities throughout the world. A review of Decadal Survey committee and panel members reflects a distinguished roster of leaders in science and engineering. NASA and National Science Foundation (NSF) officials refer to the Decadal Survey recommendations as a blueprint or guidebook and individual research scientists refer to the Surveys as a "sword and shield": a sword for wining approval and shield against cancellation of federally funded programs. Two independent studies of Surveys in 2011 \cite{Trimble2011} and 2023 \cite{pan2023seven_Decadals} both found that around 71\% of projects identified in the Decadal Surveys are funded by either federal funds or other sources. The US federal government provided majority funding for 37\% of requested items within 15 years of the survey and 53\% of items overall. Other state, private, and foreign sources provided majority funding for 10\% of items within 15 years of the survey and 19\% of items overall. The remaining 29\% of items requested were identified as very unlikely to be built or put in operation. 
 
 Stakeholders in the Decadal Surveys include many U.S. government agencies, departments, and well as private foundations that align with, or justify science funding by, Decadal Surveys such as the Alfred P. Sloan Foundation\cite{Sloan2021_decadal_private_funding} Gordon and Betty Moore Foundation\cite{Moore2017_hera_decadal_priority}, the Simmons foundation and the Heising-Simons Foundation\cite{NSF2023_advanced_simons_observatory}. NASA's Science Mission Directorate (SMD) is a typical and often central sponsor of the Decadal Surveys along with the NSF. Additional science community stakeholders in the Decadal Surveys include DOE, NOAA, and USGS. Congress, the Office fo Management and Budget, and other executive branch agencies use Decadal Surveys to evaluate budgetary plans.
 
@@ -235,7 +235,9 @@ Science strategy is further refined by operational realities. The SMD Large Miss
 The science strategy that results from this refinement process is defined in the NASA science strategy documents that are created.
 
 \subsection{Word and Context Embeddings}
-Word embeddings are numerical interpretations of text. Embeddings can capture syntactic and semantic meaning for individual words \cite{mikolov2013_reps_of_words}, sentences \cite{reimers2019sentencebertsentenceembeddingsusing}, and documents \cite{wu_2018_doc_embeds}. These numerical interpretations, or word vectors, can be used to understand textual relationships mathematically. Essentially embedding turns text into a list of numbers known as a word vector. Each number describes some aspect of meaning or usage. Words like "planet" and "moon" have word vectors that are close together while unrelated words have word vectors that are farther apart. Embeddings can be compared using measures such as distance, similarity, or direction in a manner similar to comparing two dots on a scatter plot.
+Information Retrieval has traditionally relied on concepts like the Bag of Words model\cite{harris1954}. In this approach text is represented into an unordered representation such as a sparse vector of term frequencies. These models were effective for keyword matching. However, they inherently disregarded word order or the surrounding context the word was used. 
+
+To overcome the limitations of Bag of Words models modern word embeddings provide dense numerical representations of text. Embeddings can capture syntactic and semantic meaning for individual words \cite{mikolov2013_reps_of_words}, sentences \cite{reimers2019sentencebertsentenceembeddingsusing}, and documents \cite{wu_2018_doc_embeds}. These numerical interpretations, or word vectors, can be used to understand textual relationships mathematically. Essentially embedding turns text into a list of numbers known as a word vector. Each number describes some aspect of meaning or usage. Words like "planet" and "moon" have word vectors that are close together while unrelated words have word vectors that are farther apart. Embeddings can be compared using measures such as distance, similarity, or direction in a manner similar to comparing two dots on a scatter plot.
  
 Embeddings work better with context. Early word embeddings were limited to a single global representation for each word. The ELMo model \cite{peters2018deepcontextualizedwordrepresentations} used context-dependent inputs to capture meaning across diverse contexts. ELMo was able to interpret words with polysemy thus beginning the era of Context Embedding models. These models represent words in the context of the surrounding words. Embedded context allows the model to distinguish the word "mission" in a space-science context from the same word in a religious context. Context-aware embeddings can be used to define meaning based on how the word is used. 
 
@@ -288,12 +290,12 @@ Four Decadal Surveys published between 2001 and 2007 were chosen to determine if
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology and rationale}
 \label{meth}
-This analysis followed a methodology adapted from the CRoss Industry Standard Process for Data Mining (CRISP-DM)\cite{wirth2000crisp}. The methodology consists of idempotent process steps of Ingest, Prepare, Pre-process, Model, and Validate. This outline is shown in Figure~\ref{fig_DS_Process}.
+This analysis followed a methodology adapted from the CRoss Industry Standard Process for Data Mining (CRISP-DM)\cite{wirth2000crisp}. The methodology consists of idempotent process steps of Ingest, Prepare, Pre-process, Model, and Validate. This outline is shown in Figure~\ref{fig_DS_Process}. The ingestion step is used to bring raw, unchanged, source data in it's original format into the core data science pipeline. Data preparation consists of data cleaning and extraction into a format suitable for descriptive data analysis and down stream processing. In the pre-process step data is transformed into a format suitable for natural language processing, machine learning, and predictive analytics algorithms. In the modeling step algorithms and machine learning techniques are used to uncover patterns, make predictions, and optimize for accurate analysis. Models are evaluated to ensure they address the underlying research problem or need in validation. Finally, findings are presented in results.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{fig_DS_Process.png}.
-\caption{Core Data Science Process}\label{fig_DS_Process}
+\includegraphics[width=0.9\textwidth]{fig_DS_Process.png}
+\caption{\textbf{Core Data Science Process.} The process used in this paper consists of idempotent process steps of Ingest, Prepare, Pre-process, Model, and Validate.}
 \end{figure}
 
 \subsection{Ingesting Source Data}
@@ -302,67 +304,59 @@ Data ingestion was a manual process where individual documents were downloaded f
 \subsection{Preparing the Text}
 The first step in preparation is to extract the text from the PDF files. We completed this step with \texttt{PDFminer} which is a common PDF parser and analyzer\cite{pdfminer}. \texttt{PDFminer} extracted raw page text which is then cleaned with Python's \texttt{re} module which provides support for regular expressions and conducts find and replace operations on corpus text. Regular expressions were used to remove patterns in text such as special characters used in PDF formatting, page numbers, and blank pages. Document metadata, such as year of publication, was then extracted from the file names and stored as metadata with text from each page resulting in a total corpus size of just over 800 pages of NASA science plans and Decadal Surveys. Each page of clean text with metadata was then stored for further preprocessing with context embeddings. 
 
-\subsection{Preprocessing with Context Embeddings}
+\subsection{Pre-processing with Context Embeddings}
 
 Once the text is prepared each individual page is turned into a contextual embedding vector with 1536 dimensions using the \texttt{text-embedding-ada-002} model. High dimensional embeddings were chosen to leverage prior studies on document level search \cite{Aperdannier2024_embedding_search} and because we speculate that higher dimensionality provides a larger capacity to represent information. A page of text tends to contain multiple distinct ideas.  Higher-dimensional vector space may allow the model to better represent the context, semantics, and syntactic meaning in a large chunk of text such as a page of a PDF document and prevent distinct ideas from getting aggregated into a generic average. 
 
 \subsection{Modeling with Contextual Comparison}
-All contextually embedded pages for each individual corpus are then concatenated into a single index where all pages from all documents in the corpus are included in a single index. In the same way a Bag of Words model is a simple text representation that disregards word order and only accounts for how many times a word appears, this model could be viewed as a Bag of Pages model that disregards page order and only accounts for the similarity of each page to other pages in the corpus. Page order is disregarded and only similarity of each page to the rest of the pages in the corpus is modeled. 
+All contextually embedded pages for each individual corpus are then concatenated into a single index where all pages from all documents in the corpus are included in a single index. In the same way a Bag of Words model\cite{harris1954} is a simple text representation that disregards word order and only accounts for how many times a word appears, this model could be viewed as a Bag of Pages model that disregards page order and only accounts for the similarity of each page to other pages in the corpus. Page order is disregarded and only similarity of each page to the rest of the pages in the corpus is modeled. 
 
-In order to investigate the relationship between scientific consensus and NASA plans a hierarchical approach is used. Although NASA is not a subordinate of the NSF, NASA science plans should inherit information from Decadal Surveys. This creates informational hierarchy where information from the parent Decadal Survey corpus flows to the child NASA science plan corpus. 
+In order to investigate the relationship between scientific consensus and NASA plans a sequential approach is used placing NSF Decadal Surveys as the upstream corpus and NASA Science Plans as downstream corpus. Although NASA is independent from the NSF, NASA science Plans should inherit information from Decadal Surveys. This creates directional flow where information from the upstream Decadal Survey corpus flows to the downstream NASA science plan corpus. This sequential flow establishes a baseline to quantitatively measure semantic alignment between established scientific consensus and agency execution.
 
-%moved from data section (TODO: integrate)
-The distance of science plan pages is measured from the centroid of the Decadal Survey corpus. This was necessary because any single Decadal Survey covers only one of the NASA Science Mission Directorates while NASA Science Plans cover all 5 Science Mission Directorates. The centroid (median) of the 2001-2007 Decadal Surveys was chosen as those Surveys cover 4 of the 5 SMDs. This eliminates Biological and Physical Sciences from the reference centroid because the first Decadal Survey for this SMD was not released until 2011. Including this Survey would cause 3 of the 9 NASA science plans to occur after the last document in the Decadal Survey corpus thereby causing temporal leakage. 
+The distance of science plan pages is measured from the centroid of the Decadal Survey corpus. This was necessary because any single Decadal Survey covers only one of the NASA Science Mission Directorates while NASA Science Plans cover all 5 Science Mission Directorates. A mean of the 2001-2007 Decadal Surveys was chosen as those Surveys cover 4 of the 5 SMDs. This eliminates Biological and Physical Sciences from the reference centroid because the first Decadal Survey for this SMD was not released until 2011. Including this Survey would cause 3 of the 9 NASA science plans to occur after the last document in the Decadal Survey corpus thereby causing temporal leakage. 
 
-The hierarchical relationship is modeled by creating a baseline of parent corpus documents which in this case is the Decadal Surveys. This baseline is computed by calculating a simple mean of page vectors constituting the parent corpus.  
-
-%Moved from data seciton (TODO: integrate)
 The sample of Decadal Surveys creates a baseline to observe semantic drift of NASA plans that happens after Decadal Surveys are published. Semantic drift is defined here as the rate of separation of one corpus of text from another over time. The Surveys used in this analysis along with the year published and corresponding NASA SMD Division the Survey relates to is shown in Table~\ref{tab:Decadals_used}. For a complete table of Surveys see \ref{app_Decadal_Surveys}.
 
-% moved from results
-The distance between Decadal Survey and science plans is measured using cosine similarity. The baseline of Decadal Surveys is assigned a distance value of 0. A perfectly aligned page would have a distance of 0 and lie directly on the axis. Individual pages of NASA plans are represented by points shown in Figure~\ref{fig2}. Finally the median similarity of the NASA plan pages is represented by the line plot. 
+Information flow is modeled by creating a baseline of upstream NSF Decadal Survey corpus documents. This baseline is computed by calculating the mean of page vectors constituting the upstream sample corpus.
 
-Figure~\ref{fig_simple_context_dist} is a simplified representation of the contextual distance model used. $X_{1}$ and $X_{2}$ each represent a dimension used to compare the documents thus simplifying the high dimensionality space of 1532 dimensions into just two dimensions in order to visualize the concept.
+Figure~\ref{fig_simple_context_dist} is a simplified representation of the contextual distance model used. $X_{1}$ and $X_{2}$ each represent abstract axes of semantic similarity used to compare the documents. This simplifies the high dimensionality space of 1532 dimensions into just two unitless axes in order to visualize the concept. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7
 \textwidth]{fig_simple_context_dist.png}
-\caption{Simplified Contextual Distance Model}\label{fig_simple_context_dist}
+\caption{\textbf{Simplified Contextual Distance Model.} The variables $X_1$ and $X_2$ represent abstract axes of semantic similarity, simplifying the high-dimensionality space of 1532 dimensions into two unitless axes for visualization. Downstream corpora chunks are represented inside the oval highlight. The mean of the upstream corpus is represented by the blue dot. Lines illustrate the semantic alignment between the upstream and downstream corpora. Closer downstream chunks have higher semantic alignment to the upstream mean.}
+
+\label{fig_simple_context_dist}
 \end{figure}
 
-The distance of each page in the NASA plan is calculated from the Decadal Survey centroid. Cosine similarity was chosen to calculate the distance between documents due to the use of cosine similarity in the training of the original embeddings model. 
+The alignment of each page in the NASA plan is calculated from the mean of the Decadal Survey sample corpus. The baseline of Decadal Surveys is assigned a distance value of 0. A perfectly aligned page would have a distance of 0 and lie directly on the axis. Individual pages of NASA plans are represented by points shown in Figure~\ref{fig2}. Finally the median similarity of the NASA plan pages is represented by the line plot. 
 
-Selection of data for the model required some compromise which is explained in the next section. 
+The distance between Decadal Survey and science plans is measured using cosine similarity. Cosine similarity measures the angular distance between word vectors to determine the alignment of each page to the Decadal Survey corpus. Measuring by angular distance inherently normalizes for the natural page length variation in the corpora insuring page size does not skew the alignment scores\cite{manning2008_introduction_ir}. Cosine similarity was used in the training of the original embeddings model\cite{neelakantan2022openAi_embeddings} which creates a geometric structure we can better map to using cosine similarity.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % results
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis and Results} 
 \label{anal_results}
+Figure~\ref{fig2} displays the analysis of semantic alignment between NASA science plans and Decadal Surveys. The analysis spans from 2007 to 2023. The x-axis displays the publication year of the science plans, while the y-axis shows alignment of science plans to the mean of Decadal Surveys. Each point represents a page from a science plan color coded to distinguish SMD-led plans from NASA-led plans. Points further from the x-axis have lower alignment to the Decadal Survey mean. A solid line represents the median similarity over time to illustrate the overarching trend. 
 
-
-
-\begin{figure}[H]%% placement specifier
-%% Use \includegraphics command to insert graphic files. Place graphics files in 
-%% working directory.
-\centering%% For centre alignment of image.
+\begin{figure}[H]
+\centering
 \includegraphics[width=0.9\textwidth]{fig_SP_to_DS_similarity.png}
-%% Use \caption command for figure caption and label.
-\caption{NASA Science Plan Similarity to Decadal Surveys}\label{fig2}
-%% https://en.wikibooks.org/wiki/LaTeX/Importing_Graphics#Importing_external_graphics
+\caption{\textbf{NASA Science Plan Similarity to Decadal Surveys.} Publication year is displayed on the x-axis and semantic aliment to the Decadal Survey mean is measured on the y-axis. Single science plan pages are represented by individual points with color coding to distinguish SMD and NASA led plans. The solid line tracks the trend of median similarity over time.}\label{fig2}
 \end{figure}
 
-We can observe two patterns from Figure~\ref{fig2}. First the median similarity of the NASA plans in relation to Decadal Surveys is decreasing over time. Second there is a difference between NASA led plans and SMD led plans as shown by the different colors representing the pages in each corpus.  SMD led plan pages tend to be closer to the Decadal Survey centroid. 
+We can observe two patterns from Figure~\ref{fig2}. First the median similarity of the NASA plans in relation to Decadal Surveys is decreasing over time. Second there is a difference between NASA led plans and SMD led plans as shown by the different colors representing the pages in each corpus.  SMD led plan pages tend to be closer to the Decadal Survey mean. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Discussion
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion and Future Work}
 \label{discussion}
 
-The decreased alignment over time between NASA plans and Decadal Surveys likely has many causal factors. In addition to Decadal Surveys NASA must have many other competing influences in science plans. We can conjecture that the decreased alignment may be a result of changes in consensus as Surveys are updated, changes in executive branch priorities, changes in congressional funding, or changes in operational realities. This introduces multiple vectors that are not accounted for in an analysis that focuses on Decadal Surveys and time. The limited amount of data due to the once a decade periodicity of Survey publication limits the conclusions that can be drawn. 
+The decreased alignment over time between NASA plans and Decadal Surveys likely has many causal factors. In addition to Decadal Surveys NASA must have many other competing influences in science plans. We can conjecture that the decreased alignment may be a result of changes in consensus as Surveys are updated, changes in executive branch priorities, changes in congressional funding, or changes in operational realities. This introduces multiple vectors that are not accounted for in an analysis that focuses only on Decadal Surveys alignment to science plans. The limited amount of data due to the once a decade periodicity of Survey publication limits the conclusions that can be drawn and ultimately provides analogous results. 
 
-The analogous results that are observable provide encouragement that measuring the change in semantic similarity may be a useful analysis methodology and provides several areas for further study. This particular study could be expanded by categorizing Decadal Surveys into the 5 SMD divisions and exploring a more fine grained analysis of each scientific community. As a general approach, cross corpus contextual similarity analysis may be useful in other other areas where cross organizational alignment is a concern.  The approach could be extended by comparing page level, or smaller pieces of text across corpora by means of clustering algorithms. Optimization of architecture could also be explored by optimizing for embeddings models and hyperparameters.   
+The alignment analysis conducted here suggests that measuring the change in semantic similarity is a useful methodology and highlights several areas for further study. This particular study could be expanded by categorizing Decadal Surveys into the 5 SMD divisions and exploring a more fine grained analysis of each scientific community. As a general approach, cross corpus contextual similarity analysis may be useful in other other areas where cross organizational alignment is a concern.  The approach could be extended by comparing page level, or smaller pieces of text across corpora by means of clustering algorithms. Optimization of architecture could also be explored by optimizing for embeddings models and hyperparameters.   
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
