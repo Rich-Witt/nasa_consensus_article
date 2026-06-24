@@ -16,6 +16,8 @@
 *.toc
 *.xdv
 *.dvi
+*.pdf
+*.spl
 
 # BibLaTeX/Biber
 *.blx.bib
